@@ -1,0 +1,15 @@
+<div>
+  <%= link_to('Sign Out', destroy_user_session_path, method: :delete) %>
+</div>
+
+<h1>About you</h1>
+<b>last_sign_in_ip:</b>
+<p><%= current_user.last_sign_in_ip %></p>
+<b>current_sign_in_ip:</b>
+<p><%= current_user.current_sign_in_ip %></p>
+
+<b>last_sign_in_user_agent:</b>
+<p><%= current_user.last_sign_in_user_agent %></p>
+<b>current_sign_in_user_agent:</b>
+<p><%= current_user.current_sign_in_user_agent %></p>
+

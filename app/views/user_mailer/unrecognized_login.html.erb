@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>We Noticed a New Login, <%= @user.email %></h1>
+    <p>
+      We noticed a login from a device you don't usually use:
+    </p>
+    <p>
+      <%= @user.current_sign_in_user_agent %>
+    </p>
+    <p>
+      <%= @user.last_sign_in_at.strftime('%A, %d %b %Y %l:%M %p') %>
+    </p>
+    <p>
+      If this was you, disregard this email. If this wasn't you,
+      reset your password <%= link_to('here', @password_reset_url) %>.
+    </p>
+  </body>
+</html>
