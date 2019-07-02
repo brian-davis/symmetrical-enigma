@@ -12,7 +12,7 @@
       <%= @user.current_sign_in_user_agent %>
     </p>
     <p>
-      <%= @user.last_sign_in_at.strftime('%A, %d %b %Y %l:%M %p') %>
+      <%= @user.current_sign_in_at.strftime('%A, %d %b %Y %l:%M %p') %>
     </p>
     <p>
       If this was you, disregard this email. If this wasn't you,
